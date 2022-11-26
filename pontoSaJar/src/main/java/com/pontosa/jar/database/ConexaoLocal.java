@@ -23,7 +23,7 @@ public class ConexaoLocal {
 
     private static final String driver = "com.mysql.cj.jdbc.Driver";
 
-    private static final String url = "jdbc:mysql://localhost:3306/PontoSa";
+    private static final String url = "jdbc:mysql://172.17.0.2:3306/PontoSa?autoReconnect=true&useSSL=false&useTimezone=true&serverTimezone=UTC";
 
     private static final String user = "root";
 
