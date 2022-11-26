@@ -47,7 +47,7 @@ public class Dispositivo {
     public Map<String, Object> recuperarDispositivoId() {
         try {
             Map<String, Object> registro = conexaoNuvem.getJdbcTemplate().queryForMap(
-                    "select * from dispositivo where host_name = ?", getHostName());
+                    "select * from dispositivo where host_name = '?'", getHostName());
           
 
             return registro;
