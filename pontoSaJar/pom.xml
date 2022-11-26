@@ -79,7 +79,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.pontosa.jar.login.TelaLogin</mainClass>
+                            <mainClass>com.pontosa.jar.Login</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

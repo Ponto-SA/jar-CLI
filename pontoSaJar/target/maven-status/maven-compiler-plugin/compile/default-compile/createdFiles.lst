@@ -4,6 +4,7 @@ com\pontosa\jar\login\TelaLogin$2.class
 com\pontosa\jar\login\DisplayTrayIcon.class
 com\pontosa\jar\login\TelaLogin.class
 com\pontosa\jar\usuario\TesteEmLote$1.class
+com\pontosa\jar\Login.class
 com\pontosa\jar\database\ConexaoLocal$1.class
 com\pontosa\jar\login\DisplayTrayIcon$3.class
 com\pontosa\jar\login\TelaLogin$1.class
@@ -17,6 +18,7 @@ com\pontosa\jar\database\ConexaoNuvem.class
 com\pontosa\jar\login\DisplayTrayIcon$2.class
 com\pontosa\jar\slack\Slack.class
 com\pontosa\jar\Executor.class
+com\pontosa\jar\Login$1.class
 com\pontosa\jar\database\ConexaoLocal.class
 com\pontosa\jar\log\LogError.class
 com\pontosa\jar\usuario\Usuario.class
