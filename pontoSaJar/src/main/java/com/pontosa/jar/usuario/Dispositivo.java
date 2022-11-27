@@ -222,15 +222,15 @@ public class Dispositivo {
         return looca.getProcessador().getUso();
     }
 
-    public void temperatura(Integer idDispositivo) {
-       
-            System.out.println("Teste especificação");
-            String sql = (String.format("INSERT INTO historico (fk_dispositivo, fk_tipo_metrica, registro) VALUES ('%d', '4', %.1f)", idDispositivo, looca.getTemperatura().getTemperatura()));
-            Locale.setDefault(Locale.US);
-           conexaoNuvem.getJdbcTemplate().update(sql);
-            conexaoLocal.getConnectionTemplate().update(sql);
-        
-    }
+//    public void temperatura(Integer idDispositivo) {
+//
+//            System.out.println("Teste especificação");
+//            String sql = (String.format("INSERT INTO historico (fk_dispositivo, fk_tipo_metrica, registro) VALUES ('%d', '4', %.1f)", idDispositivo, looca.getTemperatura().getTemperatura()));
+//            Locale.setDefault(Locale.US);
+//           conexaoNuvem.getJdbcTemplate().update(sql);
+//            conexaoLocal.getConnectionTemplate().update(sql);
+//
+//    }
 
     public Boolean login(String email, String senha) {
        

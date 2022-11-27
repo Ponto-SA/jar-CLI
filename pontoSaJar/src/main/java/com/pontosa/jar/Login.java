@@ -12,18 +12,30 @@ public class Login {
     public static void main(String[] args) {
 
         Dispositivo dispositivo = new Dispositivo();
+
+        Boolean existe = false;
+
+        String email;
+
+        String senha;
+
         Scanner leitor = new Scanner(System.in);
+
+        do {
 
             System.out.println("BEM VINDO Á PONTO SA");
             System.out.println("VAMOS FAZER SEU LOGIN");
 
             System.out.println("INSIRA SEU USUARIO");
-            String email = leitor.nextLine();
+            email = leitor.nextLine();
 
             System.out.println("INSIRA SUA SENHA");
-            String senha = leitor.nextLine();
+            senha = leitor.nextLine();
 
-            Boolean existe =  dispositivo.login(email, senha);
+            existe =  dispositivo.login(email, senha);
+
+        } while (!existe);
+
 
 
         if (existe) {
