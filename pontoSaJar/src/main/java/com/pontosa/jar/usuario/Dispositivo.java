@@ -63,7 +63,7 @@ public class Dispositivo {
     public Map<String, Object> recuperarDispositivoId(String email) {
         try {
             Map<String, Object> registro = conexaoNuvem.getJdbcTemplate().queryForMap(
-                    "select dispositivo.id from dispositivo inner join usuario_maquina on dispositivo.id = usuario_maquina.fk_dispositivo inner join usuario on usuario.id = usuario_maquina.fk_usuario where usuario.email = ?", email);
+                    "select dispositivo.id from dispositivo inner join usuario_maquina on dispositivo.id = usuario_maquina.fk_dispositivo inner join usuario on usuario.id = usuario_maquina.fk_usuario where usuario.email = ? and usuario_maquina.ativo = 1", email);
 
 
             return registro;
@@ -235,6 +235,11 @@ public class Dispositivo {
     public Boolean login(String email, String senha) {
        
         Map<String, Object> usuarioMomento =  usuario.recuperar(email, senha);
+
+        if (usuarioMomento == null) {
+            return false;
+        }
+
         Integer id = Integer.valueOf(String.valueOf(usuarioMomento.get("id")));
         String nome = String.valueOf(usuarioMomento.get("nome"));
         String sobrenome = String.valueOf(usuarioMomento.get("sobrenome"));
